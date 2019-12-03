@@ -1,11 +1,11 @@
-let timer = document.querySelector("#timer");
-let hours = document.querySelector("#hours");
-let minutes = document.querySelector("#minutes");
-let seconds = document.querySelector("#seconds");
+let timer = document.querySelector("#tempo");
+let hours = document.querySelector("#horas");
+let minutes = document.querySelector("#minutos");
+let seconds = document.querySelector("#seg");
 
 let time = setInterval(() => {
   let duration = moment.duration(
-    moment("2019-01-01 00:00:00").valueOf() - moment().valueOf()
+    moment("2020-01-01 00:00:00").valueOf() - moment().valueOf()
   );
 
   if (duration >= 0) {
