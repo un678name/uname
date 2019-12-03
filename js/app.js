@@ -1,19 +1,28 @@
-var deadline = new Date("Jan 1, 2020 00:00:00").getTime(); 
-var x = setInterval(function() { 
-var now = new Date().getTime(); 
-var t = deadline - now; 
-var days = Math.floor(t / (1000 * 60 * 60 * 24)); 
-var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60)); 
-var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60)); 
-var seconds = Math.floor((t % (1000 * 60)) / 1000); 
-document.getElementById("count").innerHTML = days + "d "  
-+ hours + "h " + minutes + "m " + seconds + "s "; 
+let timer = document.querySelector("#timer");
+let hours = document.querySelector("#hours");
+let minutes = document.querySelector("#minutes");
+let seconds = document.querySelector("#seconds");
 
-    if (t < 0) { 
+let time = setInterval(() => {
+  let duration = moment.duration(
+    moment("2019-01-01 00:00:00").valueOf() - moment().valueOf()
+  );
 
-        clearInterval(x); 
-
-        document.getElementById("count").innerHTML = "DESPERDICOU O TEMPO"; 
-
-    } 
-}, 1000); 
+  if (duration >= 0) {
+    hours.textContent =
+      duration.hours().toString().length === 1
+        ? "0" + duration.hours().toString()
+        : duration.hours().toString();
+    minutes.textContent =
+      duration.minutes().toString().length === 1
+        ? "0" + duration.minutes().toString()
+        : duration.minutes().toString();
+    seconds.textContent =
+      duration.seconds().toString().length === 1
+        ? "0" + duration.seconds().toString()
+        : duration.seconds().toString();
+  } else {
+    timer.textContent = "SIM VOCE PERDEU TEMPO A VIDA...";
+    clearInterval(time);
+  }
+}, 1000);
