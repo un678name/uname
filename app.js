@@ -9,6 +9,10 @@ let time = setInterval(() => {
   );
 
   if (duration >= 0) {
+    timer.textContent =
+      duration.hours().toString().length === 1
+        ? "0" + duration.days().toString()
+        : duration.days().toString();
     hours.textContent =
       duration.hours().toString().length === 1
         ? "0" + duration.hours().toString()
