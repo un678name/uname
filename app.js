@@ -26,8 +26,8 @@ let time = setInterval(() => {
         ? "0" + duration.seconds().toString()
         : duration.seconds().toString();
   } else {
-    timer.textContent = "SIM ACABOU 2019 VENHA E UM ANO DA SUA VIDA ACABOU ;-;";
+    timer.textContent = " ";
     clearInterval(time);
-    alert("ACABOU 2019 ESPERE POR 2020")
+    alert("ACABOU 2019 ESPERE PARA AMANHA 2020")
   }
 }, 1000);
