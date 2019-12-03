@@ -29,7 +29,5 @@ let time = setInterval(() => {
     timer.textContent = "SIM ACABOU 2019 VENHA E UM ANO DA SUA VIDA ACABOU ;-;";
     clearInterval(time);
     alert("ACABOU 2019 ESPERE POR 2020")
-    var audio = new Audio('papapa.mp3');
-    audio.play();
   }
 }, 1000);
