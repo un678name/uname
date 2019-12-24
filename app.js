@@ -28,6 +28,6 @@ let time = setInterval(() => {
   } else {
     timer.textContent = " ";
     clearInterval(time);
-    alert("ACABOU 2019 ESPERE PARA AMANHA 2020")
+    alert("GG 2019 ACABOU YAY [#ANONOVO]")
   }
 }, 1000);
