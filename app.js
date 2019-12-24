@@ -26,8 +26,6 @@ let time = setInterval(() => {
         ? "0" + duration.seconds().toString()
         : duration.seconds().toString();
   } else {
-    timer.textContent = " ";
-    clearInterval(time);
     alert("GG 2019 ACABOU YAY [#ANONOVO]")
   }
 }, 1000);
