@@ -26,6 +26,6 @@ let time = setInterval(() => {
         ? "0" + duration.seconds().toString()
         : duration.seconds().toString();
   } else {
-    alert("GG 2019 ACABOU YAY [#ANONOVO]")
+    alert("GG 2019 ACABOU YAY VENHA AMANHA PARA 2020")
   }
 }, 1000);
